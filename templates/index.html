@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://wallpapercave.com/wp/wp8601578.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery.dataTables.min.css' %}">
+        <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center text-white bg-dark">Images</h1>
+    
+    <div class="container">
+        {% for i in key %}
+        <div class="row">
+            <div class="col-6">
+                <img src="{{i.images.url}}" alt="Sorry error" class="rounded" width="500px" height="300px">
+            </div>
+            <div class="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sequi! Tempora minima illum excepturi molestiae commodi ratione eveniet ullam sunt deserunt magnam! Assumenda perferendis consequatur minima? Impedit, vel laborum explicabo, mollitia, velit voluptatem eligendi dolorem nobis quas temporibus ipsum quisquam molestiae architecto suscipit totam voluptates saepe et est veritatis voluptatum! Voluptas ut eaque ducimus quae molestiae eius labore quam rem. Optio, illum blanditiis enim quidem culpa corrupti, iste sit magni officia, neque laboriosam quod esse. Ducimus soluta neque nobis sint adipisci quam cupiditate corrupti magni reprehenderit eius fugiat, id facere laboriosam voluptas animi dignissimos dolore necessitatibus modi reiciendis? Consectetur, eligendi.</p>
+            </div>
+        </div><br><br>
+        {% endfor %}
+    </div>
+</body>
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<script src="{% static 'jquery.dataTables.min.js' %}"></script>
+</html>
